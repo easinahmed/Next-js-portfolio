@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  --font-montserrat: var(--font-montserrat);
+  --font-open-sans: var(--font-open-sans);
+  --font-playfair: var(--font-playfair);
+  --font-unbounded: var(--font-unbounded);
+  --font-raleway: var(--font-raleway);
+}
+
+/* Global Styles */
+body {
+  @apply font-sans;
+}
+
+/* Animations from legacy main.js / style.css */
+/* Reimplementing the loading screen 'fall' animation if needed, though better handled in component */
+@keyframes fall {
+  0% {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-fall {
+  animation: fall 0.9s forwards;
+}
+
+/* Legacy Reveal Animation Class usually toggled by JS */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease-out;
+}
+
+.active-reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
