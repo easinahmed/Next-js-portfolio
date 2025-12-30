@@ -51,22 +51,22 @@ export default function LoadingScreen({ onComplete }: { onComplete: () => void }
     return (
         <div
             id="loading-screen"
-            className={`fixed top-0 left-0 w-full h-full bg-black flex justify-center items-center flex-col z-[9999] overflow-hidden text-[#00f0ff] text-center transition-opacity duration-500 ${!isVisible ? 'opacity-0' : 'opacity-100'}`}
+            className={`fixed top-0 left-0 w-full h-full bg-black flex justify-center items-center flex-col z-9999 overflow-hidden text-[#00f0ff] text-center transition-opacity duration-500 ${!isVisible ? 'opacity-0' : 'opacity-100'}`}
         >
             <div className="loading-content">
-                <div className={`mb-5 ${mainIconVisible ? 'animate-fall opacity-100' : 'opacity-0 translate-y-[-200px]'}`}>
+                <div className={`mb-5 ${mainIconVisible ? 'animate-fall opacity-100' : 'opacity-0 -translate-y-50'}`}>
                     <i className="fa-solid fa-laptop-code fa-5x main-icon"></i>
                 </div>
 
-                <h1 className={`text-4xl font-bold my-5 ${loadingTextVisible ? 'animate-fall opacity-100' : 'opacity-0 translate-y-[-200px]'}`} id="loading-text">MY PROFILE</h1>
+                <h1 className={`text-4xl font-bold my-5 ${loadingTextVisible ? 'animate-fall opacity-100' : 'opacity-0 -translate-y-50'}`} id="loading-text">MY PROFILE</h1>
 
                 <div className="sub-icons flex justify-center gap-6 mb-5">
-                    <i className={`fa-brands fa-github fa-2x ${subIconsVisible[0] ? 'animate-fall opacity-100' : 'opacity-0 translate-y-[-200px]'}`}></i>
-                    <i className={`fa-solid fa-code fa-2x ${subIconsVisible[1] ? 'animate-fall opacity-100' : 'opacity-0 translate-y-[-200px]'}`}></i>
-                    <i className={`fa-solid fa-user fa-2x ${subIconsVisible[2] ? 'animate-fall opacity-100' : 'opacity-0 translate-y-[-200px]'}`}></i>
+                    <i className={`fa-brands fa-github fa-2x ${subIconsVisible[0] ? 'animate-fall opacity-100' : 'opacity-0 -translate-y-50'}`}></i>
+                    <i className={`fa-solid fa-code fa-2x ${subIconsVisible[1] ? 'animate-fall opacity-100' : 'opacity-0 -translate-y-50'}`}></i>
+                    <i className={`fa-solid fa-user fa-2x ${subIconsVisible[2] ? 'animate-fall opacity-100' : 'opacity-0 -translate-y-50'}`}></i>
                 </div>
 
-                <h2 className={`font-semibold text-xl my-5 ${designerTextVisible ? 'animate-fall opacity-100' : 'opacity-0 translate-y-[-200px]'}`} id="designer-text">Designed by Amine</h2>
+                <h2 className={`font-semibold text-xl my-5 ${designerTextVisible ? 'animate-fall opacity-100' : 'opacity-0 -translate-y-50'}`} id="designer-text">Designed by Easin</h2>
             </div>
         </div>
     );
